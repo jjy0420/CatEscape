@@ -35,6 +35,9 @@ public class ArrowController : MonoBehaviour
 
         if(d < r1 + r2)
         {
+            GameObject director = GameObject.Find("GameDirector");
+            director.GetComponent<GameDirector>().DecreaseHp();
+
             //충돌 시 화살을 지움
             Destroy(gameObject);
         }
